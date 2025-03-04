@@ -3,24 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ian Wilson - Portfolio</title>
+        <title>Ian Wilson - Fingerprint Algorithm</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         
         <div class="header">
             <div class="text-container">
-                <p>
-                    Ian Wilson <br> 2025 Project Portfolio <br> <br>
-                    Email: <a href="mailto:ianwilson2@mail.fresnostate.edu">ianwilson2@mail.fresnostate.edu</a> | 
-                    Phone: (559)212-5504 | 
-                    <a href="https://github.com/ianwilson1">GitHub</a> | 
-                    <a href="https://www.linkedin.com/in/ianwilson22/">LinkedIn</a> 
-                    <br> <br>
-                    Welcome to my portfolio! &#128526;
-                </p>
+                <h1>
+                    Fingerprint Recognition Alogrithm Project
+                </h1>
             </div>
-            <img src="./images/IanPic.JPG" class="profile-pic">
         </div>
         
         <div class="links">
@@ -68,40 +61,6 @@
             <a href="./images/ResearchPaper.pdf" target="_blank">View the Research Paper</a>
 
         </div>
-
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const profilePic = document.querySelector(".profile-pic");
-            
-                profilePic.addEventListener("click", function () {
-                    const overlay = document.createElement("div");
-                    overlay.classList.add("fullscreen");
-            
-                    const enlargedImage = document.createElement("img");
-                    enlargedImage.src = profilePic.src;
-            
-                    const description = document.createElement("p");
-                    description.classList.add("fullscreen-description");
-                    description.textContent = "Picture of me on a fun vacation to San Jose, shopping at Santana Row :)";
-            
-                    const closeButton = document.createElement("span");
-                    closeButton.classList.add("fullscreen-close");
-                    closeButton.innerHTML = "&times;";
-            
-                    closeButton.addEventListener("click", function () {
-                        overlay.remove();
-                    });
-            
-                    overlay.appendChild(enlargedImage);
-                    overlay.appendChild(description);
-                    overlay.appendChild(closeButton);
-                    document.body.appendChild(overlay);
-                });
-            });
-            </script>
-            
-            </script>
-            
     </body>
 
     <footer>
