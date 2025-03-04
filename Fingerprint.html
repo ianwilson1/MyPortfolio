@@ -7,26 +7,101 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-
+        
         <div class="header">
-            <p>Ian Wilson <br> 2025 Project Portfolio </p>
-            <p>Email: <a href="mailto:ianwilson2@mail.fresnostate.edu">ianwilson2@mail.fresnostate.edu</a> | Phone: (559)212-5504 | <a href="https://github.com/ianwilson1">GitHub</a> | <a href="https://www.linkedin.com/in/ianwilson22/">LinkedIn</a></p>
-            <p1>Welcome to my portfolio! &#128526;</p1>
+            <div class="text-container">
+                <p>
+                    Ian Wilson <br> 2025 Project Portfolio <br> <br>
+                    Email: <a href="mailto:ianwilson2@mail.fresnostate.edu">ianwilson2@mail.fresnostate.edu</a> | 
+                    Phone: (559)212-5504 | 
+                    <a href="https://github.com/ianwilson1">GitHub</a> | 
+                    <a href="https://www.linkedin.com/in/ianwilson22/">LinkedIn</a> 
+                    <br> <br>
+                    Welcome to my portfolio! &#128526;
+                </p>
+            </div>
+            <img src="./images/IanPic.JPG" class="profile-pic">
         </div>
+        
+        <div class="links">
+            <a href="./Portfolio.html">Home</a>
+            <a href="./SpotMe.html">Spot-Me</a>
+            <a href="./Shell.html">Shell</a>
+            <a href="./NetworkProtocol.html">Networking</a>
+        </div>
+
         <div class="bodycontent">
             <h1>
-                Fingerprint Algorithm
+                Project Summary
             </h1>
 
-      
+            <p>
+                This project introduces a novel fingerprint recognition algorithm using a High-Density Grid-Based Matching technique. Unlike traditional methods that store an entire fingerprint image, this algorithm focuses on high-density minutiae grids, which significantly reduce the storage needed for sensitive data while improving the robustness, security, and speed of the system.
+            </p>
+
+         
 
             <h1>
-                See My Work
+                Key Highlights
             </h1>
 
-            <p>At the top of the page feel free to check out some of my work! These include different projects I have proudly worked on over the course of my college journey. Some of my featured projects include my fingerprint recognition algorithm and my parking spot finder app 'SpotMe' and others.</p>
+            <ul>
+                <li>
+                    **Storage Efficiency**: Only a fraction of the fingerprint image is stored being the top seven 80x80 pixel high-density segment regions of the fingerprint. In all, reducing data storage requirements and enhancing data security.
+                </li>
+                <li>
+                    **Improved Security**: By only storing the high-density minutiae areas, sensitive data storage reduction mitigates risks associated with compromised biometric data.
+                </li>
+                <li>
+                    **Performance Gains**: Processing speed increased by 20-30% due to optimized focus on critical regions of the fingerprint.
+                </li>
+            </ul>
+
+            <img src="./images/ProcessingTimesFP.png" alt="Processing Time Graphics" style="width:100%">
+            <img src="./images/FPChart.png" alt="High-Density Grid Visualization" style="width:100%">
+
+            <h1>Research Contribution</h1>
+
+            <p>
+                The research paper for this project, "High-Density Grid-Based Matching Versus Global Matching," follows the IEEE format and provides a detailed methodology, results, and comparative analysis. The algorithm demonstrates improved processing efficiency and security, making it a viable solution for real-world biometric systems.
+            </p>
+            <a href="./images/ResearchPaper.pdf" target="_blank">View the Research Paper</a>
 
         </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const profilePic = document.querySelector(".profile-pic");
+            
+                profilePic.addEventListener("click", function () {
+                    const overlay = document.createElement("div");
+                    overlay.classList.add("fullscreen");
+            
+                    const enlargedImage = document.createElement("img");
+                    enlargedImage.src = profilePic.src;
+            
+                    const description = document.createElement("p");
+                    description.classList.add("fullscreen-description");
+                    description.textContent = "Picture of me on a fun vacation to San Jose, shopping at Santana Row :)";
+            
+                    const closeButton = document.createElement("span");
+                    closeButton.classList.add("fullscreen-close");
+                    closeButton.innerHTML = "&times;";
+            
+                    closeButton.addEventListener("click", function () {
+                        overlay.remove();
+                    });
+            
+                    overlay.appendChild(enlargedImage);
+                    overlay.appendChild(description);
+                    overlay.appendChild(closeButton);
+                    document.body.appendChild(overlay);
+                });
+            });
+            </script>
+            
+            </script>
+            
     </body>
 
     <footer>
