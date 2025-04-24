@@ -28,15 +28,46 @@
                 Overview
             </h1>
 
-            <p>SpotMe is a mobile application designed to help students, faculty, and staff at CSU Fresno locate available parking spots in real-time. The app enhances parking efficiency by providing live congestion data, soft reservation features, and a weekly scheduling tool to help users plan their parking habits. By integrating Google Maps API, MongoDB, and Google Cloud Services, SpotMe delivers a seamless, data-driven parking experience.</p>
+            <p>SpotMe is a mobile-first application developed using React Native to provide a seamless, cross-platform user experience for monitoring real-time parking congestion. The frontend interface, built with React Native and JavaScript, allows users to view current congestion levels, interact with a weekly parking scheduler, and refresh data on-demand. The app's UI was designed to be intuitive and responsive, making it accessible for students and commuters navigating campus parking.</p>
+            <p>On the backend, Python was used to implement core logic and API services that communicate with a MongoDB database. Python scripts manage data collection, update congestion statuses, and respond to user-triggered refreshes through HTTP requests. The system uses Flask (or FastAPI if applicable) to expose endpoints for retrieving and modifying parking lot data. MongoDB stores metadata for each parking space, including current congestion ratings, timestamps, and historical patterns.</p>
 
             <h1>
                 Key Highlights
             </h1>
 
+            <ul>
+                <li>
+                    Built with React Native for a smooth, cross-platform mobile experience.
+                </li>
+                    MongoDB used to store live congestion data per parking spot with fast retrieval
+                <li>
+                    Live refresh functionality allows users to get current congestion updates instantly
+                <li>
+                    Weekly scheduler feature enables users to view and plan around peak congestion times
+                </li>
+                <li>
+                    Goal: Reduce parking frustration and improve traffic flow on campus
+                </li>
+            </ul>
+
             <h1>
                 Important Documents
             </h1>
+            <ul>
+                <li>
+                    <a href="./images/Feasibility Report - SpotMe.pdf" target="_blank">Feasibility Report</a> <br>
+                </li>
+                <li>
+                    <a href="./images/System Requirements Document.pdf" target="_blank">System Requirements Report</a> <br>
+                </li>
+                <li>
+                    <a href="./images/User Requirements Document.pdf" target="_blank">User Requirement Report</a> <br>
+                </li>
+                
+            </ul>
+            
+
+
 
         </div>
     </body>
